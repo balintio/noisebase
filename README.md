@@ -24,10 +24,10 @@
 <details>
 <summary><h2>What is Monte Carlo denoising?</h2></summary>
 
-<figure align="center">
-  <img src="docs/_static/Pi_monte_carlo_all.gif" width="30%">
-  <figcaption>Monte Carlo integration <a href="https://commons.wikimedia.org/w/index.php?curid=140013480"><b>Kmhkmh</b></a></figcaption>
-</figure>
+<div align="center">
+  <img src="docs/_static/Pi_monte_carlo_all.gif" width="30%"> <br>
+  <p>Monte Carlo integration <a href="https://commons.wikimedia.org/w/index.php?curid=140013480"><b>Kmhkmh</b></a></p>
+</div>
 
 Monte Carlo methods approximate integrals by sampling random points from the function's domain, evaluating the function, and averaging the resulting samples. We mainly focus on *light transport simulation* as it's a complex and mature application, usually producing visual and intuitive results. In this case, our samples are light paths that a "photon" might take. Above on the right, you see an image rendered with 4 samples per pixel. It's quite noisy.
 
