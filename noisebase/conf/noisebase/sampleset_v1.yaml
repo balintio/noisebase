@@ -1,0 +1,18 @@
+defaults:
+  - ./format/training_sample_v1@_here_
+  - _self_
+
+name: "Sample Set v1 - Training Dataset"
+
+data_remote: https://neural-partitioning-pyramids.mpi-inf.mpg.de/data/
+
+src:
+  sequences: 1024
+  files: sampleset_v1/train/scene{index:04d}.zip
+  frames_per_sequence: 64
+  crop: 256
+  samples: 32
+  rendering_height: 1080
+  rendering_width: 1920
+
+_target_: ${.loaders[${.framework}]}

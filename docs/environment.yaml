@@ -1,0 +1,25 @@
+name: noisebase-docs
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  # Noisebase import for autodoc
+  - lightning>=2.2
+  - pytorch>=2.1
+  - torchvision 
+  - torchaudio 
+  - pytorch-cuda
+  - zarr>=2
+  - imageio
+  - scipy
+  - ffmpeg
+
+  - sphinx
+  - myst-parser
+  - sphinx-copybutton
+  - sphinx-codeautolink
+  - pip:
+    - build
+    - furo
+    - -e ..

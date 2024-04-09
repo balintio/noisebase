@@ -1,0 +1,36 @@
+defaults:
+  - ./format/test_sample_v1@_here_
+  - _self_
+
+name: "Sample Set v1 - Test32 Dataset"
+output: test32/{sequence_name}/frame{index:04d}.png
+reference: sampleset_v1/ref/test32/{sequence_name}/frame{index:04d}.png
+metrics: test32/{sequence_name}.json
+warmup: 16
+
+data_remote: https://neural-partitioning-pyramids.mpi-inf.mpg.de/data/
+
+src:
+  sequences:
+    - name: bistro1
+      frames: 40
+    - name: bistro2
+      frames: 40
+    - name: bistro3
+      frames: 40
+    - name: bistro1-day
+      frames: 40
+    
+    - name: bedroom
+      frames: 40
+    - name: dining-room
+      frames: 40
+    - name: kitchen
+      frames: 40
+  
+  samples: 32
+  rendering_height: 1080
+  rendering_width: 1920
+  files: sampleset_v1/test32/{sequence_name}/frame{index:04d}.zip
+
+_target_: ${.loaders[${.framework}]}

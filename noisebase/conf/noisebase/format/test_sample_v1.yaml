@@ -1,0 +1,32 @@
+type: training_sample_v1
+
+name: ???
+reference: ???
+output: ???
+metrics: ???
+warmup: 0
+
+src:
+  files: ???
+  sequences: ???
+  samples: ???
+  rendering_height: ???
+  rendering_width: ???
+
+data_remote: null
+data_path: null
+loaders:
+  torch: noisebase.loaders.torch.TestSampleLoader_v1
+
+buffers:
+  - normal
+  - motion
+  - depth
+  - w_normal
+  - w_motion
+  - w_position
+  - diffuse
+  - color
+  - reference
+samples: 8
+framework: torch

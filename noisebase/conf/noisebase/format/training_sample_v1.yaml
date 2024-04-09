@@ -1,0 +1,42 @@
+type: training_sample_v1
+
+name: ???
+
+src:
+  files: ???
+  sequences: ???
+  frames_per_sequence: ???
+  crop: ???
+  samples: ???
+  rendering_height: ???
+  rendering_width: ???
+
+data_remote: null
+data_path: null
+loaders:
+  lightning: noisebase.loaders.lightning.TrainingSampleLoader_v1
+  torch: noisebase.loaders.torch.TrainingSampleLoader_v1
+
+buffers:
+  - normal
+  - motion
+  - depth
+  - w_normal
+  - w_motion
+  - w_position
+  - diffuse
+  - color
+  - reference
+samples: 8
+flip_rotate: True
+batch_size: 8
+num_workers: 4
+shuffle: True
+drop_last: True
+val_split: 0.05
+seed: 42
+framework: torch
+
+stage: train
+sampler_state:
+  get_epoch: null

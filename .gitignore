@@ -1,0 +1,16 @@
+# CPython cache
+**/__pycache__
+*.py[cod]
+
+# Evironments
+env
+docs/env
+
+# Build artefacts
+noisebase.egg-info
+dist
+docs/_build
+
+# Data
+data
+outputs
