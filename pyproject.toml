@@ -12,13 +12,14 @@ dependencies = [
   "zarr>=2",
   "pytorch-msssim",
   "hydra-core",
+  "requests",
   "tqdm"
 ]
 authors = [{name = "Martin Bálint", email = "martin@balint.io"}]
 readme = "README.md"
 keywords = ["denoising", "Monte Carlo", "MC", "neural"]
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 4 - Beta",
     "License :: OSI Approved :: Apache Software License",
 
     "Environment :: GPU",

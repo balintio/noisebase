@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/_static/logo-01.png" width="100%">
+  <img src="https://github.com/balintio/noisebase/raw/main/docs/_static/logo-01.png" width="100%">
 </p>
 
 <div align="center">
@@ -17,15 +17,16 @@
 **Datasets and benchmarks for neural Monte Carlo denoising.**
 
 <p align="center">
-  <img src="docs/_static/teaser.png" width="70%">
+  <img src="https://github.com/balintio/noisebase/raw/main/docs/_static/teaser.png" width="70%">
 </p>
 
-
+What is Monte Carlo denoising?
+------------------------------
 <details>
-<summary><h2>What is Monte Carlo denoising?</h2></summary>
+<summary>Read More</summary>
 
 <div align="center">
-  <img src="docs/_static/Pi_monte_carlo_all.gif" width="30%"> <br>
+  <img src="https://github.com/balintio/noisebase/raw/main/docs/_static/Pi_monte_carlo_all.gif" width="30%"> <br>
   <p>Monte Carlo integration <a href="https://commons.wikimedia.org/w/index.php?curid=140013480"><b>Kmhkmh</b></a></p>
 </div>
 

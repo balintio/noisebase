@@ -9,7 +9,7 @@ Noisebase config files in your Hydra path and, in addition, provides a
 `Noisebase` function should you wish to keep your use of Hydra to a minimum.
 """
 
-__version__ = '0.1'
+__version__ = '1.1'
 
 import os
 
