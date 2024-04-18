@@ -7,16 +7,23 @@ import requests
 from tqdm import tqdm
 
 def resolve_data_path(data_path):
-    if data_path != None:
+    if data_path != None: # Using custom data folder
         return data_path
+    # Otherwise find the default folder
 
-    dist_info = json.loads(metadata.distribution('noisebase').read_text('direct_url.json'))
-    editable = dist_info.get('dir_info', {}).get('editable', False)
+    # Fetch metadata saved by Pip
+    url_file = metadata.distribution('noisebase').read_text('direct_url.json')
 
-    if editable:
+    if url_file == None: # Noisebase installed through PyPI
+        editable = False
+    else: # Noisebase installed from elsewhere (potentially editable)
+        dist_info = json.loads(url_file)
+        editable = dist_info.get('dir_info', {}).get('editable', False)
+
+    if editable: # Default folder is cloned_repo/data
         nb_folder = unquote_plus(urlparse(dist_info['url']).path)
         return os.path.join(nb_folder, 'data')
-    else:
+    else: # Default folder is working_directory/data
         return os.path.join(os.getcwd(), 'data')
 
 def consumer_generator(queue, producer_process):
