@@ -277,7 +277,7 @@ class TestSampleLoader_v1():
         remote_path = self.kwargs['data_remote']
 
         if remote_path == None:
-            print(f'Download aborted: the remote path for "{self.kwargs['name']}" was not provided.')
+            print(f'Download aborted: the remote path for \"{self.kwargs["name"]}\" was not provided.')
             print('Consult the dataset\'s documentation for instructions on acquiring it.')
             return
 

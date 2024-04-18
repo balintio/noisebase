@@ -234,7 +234,7 @@ class TrainingSampleLoader_v1(torch.utils.data.DataLoader):
         remote_path = self.__kwargs['data_remote']
 
         if remote_path == None:
-            print(f'Download aborted: the remote path for "{self.__kwargs['name']}" was not provided.')
+            print(f'Download aborted: the remote path for \"{self.__kwargs["name"]}\" was not provided.')
             print('Consult the dataset\'s documentation for instructions on acquiring it.')
             return
 
